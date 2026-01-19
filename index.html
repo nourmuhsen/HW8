@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            scroll-behavior: smooth;
+
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: orange
+        }
+
+        hr {
+            width: 150px;
+            height: 6px;
+            background-color: rgb(14, 86, 110);
+            margin: 50px auto;
+        }
+
+        @media(max-width: 750px) {
+            hr {
+                margin: 30px auto;
+            }
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background-image: url(Assets/Exercise_3_Assets/hero.jpg);
+            width: 100vw;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .layer {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0, 0, 0, 0.5);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        header h2 a {
+            font-size: 30px;
+        }
+
+        header nav a {
+            margin: 0 10px
+        }
+
+        .main-txt {
+            margin-top: 150px;
+            color: white
+        }
+
+        .main-txt h1 {
+            font-size: 50px;
+        }
+
+        .main-txt h3 {
+            font-size: 30px;
+            margin: 20px 0;
+        }
+
+        .main-txt a {
+            color: white;
+            background-color: dodgerblue;
+            padding: 20px 40px;
+            border-radius: 10px;
+            margin: 10px 0;
+            display: inline-block;
+        }
+
+        .main-txt a:hover {
+            background-color: rgb(19, 94, 170);
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+                padding: 30px 0 0 0;
+            }
+
+            .main-txt h1 {
+                font-size: 40px;
+            }
+
+            .main-txt h3 {
+                font-size: 25px;
+                margin: 15px 0;
+            }
+        }
+
+        /* OUR WORK */
+        .our-work {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 50px 200px;
+        }
+
+        .title {
+            font-size: 35px;
+            margin: 20px;
+        }
+
+        p {
+            line-height: 1.7;
+        }
+
+        .grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .grid div {
+            padding: 20px;
+            height: 350px;
+            margin: 3px;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .small {
+            flex-basis: 35%;
+        }
+
+        .large {
+            flex-basis: 55%;
+        }
+
+        @media (max-width: 1200px) {
+            .our-work {
+                padding: 50px 12vw;
+            }
+
+            .grid div {
+                height: 30vh;
+            }
+        }
+
+        @media (max-width: 750px) {
+            .our-work {
+                padding: 50px 30px;
+            }
+
+            .title {
+                font-size: 30px;
+                margin: 10px;
+                margin-bottom: 40px;
+            }
+
+            .grid div {
+                padding: 20px;
+                height: 170px;
+                margin: 2px;
+            }
+        }
+
+        /* Feature Section */
+        .features {
+            background-color: rgb(175, 218, 240);
+            text-align: center;
+            padding: 50px 200px;
+        }
+
+        .card {
+            box-shadow: 2px 2px 10px rgb(255, 255, 255);
+            margin: 5px;
+            padding: 50px;
+            border-radius: 50%;
+            background-color: lightgoldenrodyellow;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (max-width: 750px) {
+            .features {
+                padding: 50px 30px;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+
+            .card {
+                padding: 35px;
+            }
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            text-align: center;
+            padding: 50px 200px;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        form input {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        form .btn {
+            padding: 20px 40px;
+            background-color: dodgerblue;
+            color: white;
+            flex-grow: 1;
+        }
+
+        @media (max-width: 850px) {
+            .newsletter {
+                padding: 50px 40px;
+            }
+
+            form {
+                gap: 10px;
+                flex-direction: column;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgb(23, 23, 23);
+            padding: 40px;
+            text-align: center;
+            color: lightgray;
+        }
+
+        .mybtn {
+            padding: 10px;
+            background-color: orange;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero" id="top">
+        <div class="layer">
+            <header>
+                <h2>
+                    <a href="#">Website Logo</a>
+                </h2>
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="#ourwork">Our Work</a>
+                    <a href="#features">Features</a>
+                    <a href="#news">News Letter</a>
+                </nav>
+            </header>
+            <div class="main-txt">
+                <h1>Responsive Flexbox Template</h1>
+                <h3>Done by Nour Muhsen</h3>
+                <a href="#"> Download it Here</a>
+
+            </div>
+        </div>
+    </section>
+    <section class="our-work" id="ourwork">
+        <h3 class="title">Some of our Work</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatum beatae molestias, quia aliquid
+            aperiam, expedita voluptates ad aut sunt iste inventore reprehenderit adipisci aliquam eaque nihil. Numquam,
+            deserunt qui.</p>
+        <hr>
+
+        <div class="grid">
+            <div class="small" style="background-image: url(Assets/Exercise_3_Assets/balloon.jpg);"></div>
+            <div class="large" style="background-image: url(Assets/Exercise_3_Assets/coast.jpg);"></div>
+            <div class="large" style="background-image: url(Assets/Exercise_3_Assets/island.jpg);"></div>
+            <div class="small" style="background-image: url(Assets/Exercise_3_Assets/mountain.jpg);"></div>
+        </div>
+
+    </section>
+    <section class="features" id="features">
+        <h3 class="title">Features</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatum beatae molestias, quia aliquid
+            aperiam, expedita voluptates ad aut sunt iste inventore reprehenderit adipisci aliquam eaque nihil. Numquam,
+            deserunt qui.</p>
+        <hr>
+
+        <div class="cards">
+            <div class="card">
+                <h4>Photography</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices
+                    vitae pulvinar velit.</p>
+            </div>
+            <div class="card">
+                <h4>Photography</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices
+                    vitae pulvinar velit.</p>
+            </div>
+            <div class="card">
+                <h4>Photography</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices
+                    vitae pulvinar velit.</p>
+            </div>
+        </div>
+
+    </section>
+    <section class="newsletter" id="news">
+        <h3 class="title">Join Our NewsLetter</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices. Morbi
+            vitae pulvinar velit. Sed aliquam dictum sapien, id sagittis augue malesuada eu.</p>
+        <hr>
+
+        <form>
+            <input type="email" placeholder="Email">
+            <a href="#" class="btn">Subscribe now</a>
+        </form>
+    </section>
+    <footer>
+        <p>Made by <a href="https://www.linkedin.com/in/nour-muhsen">Nour Muhsen</a>. <br>Images courtesy to
+            <a href="https://unsplash.com/">Unsplash</a>.
+        </p>
+    </footer>
+
+    <a href="#top">
+        <div class="mybtn">
+            <i class="fa-solid fa-arrow-up-from-bracket" style="color:white"></i>
+        </div>
+    </a>
+</body>
+
+</html>
